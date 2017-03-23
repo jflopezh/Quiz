@@ -32,4 +32,16 @@ public class Piso {
             }
         }
     }
+    
+    public String Info(){
+        String x = "Piso " + this.NroPiso;
+        x += "\n--------------------------------------------------------------\n";
+        for (int i = 0; i < this.Habitaciones.length; i++) {
+            if (i != 0) {
+                x += "\n..............................................................\n";
+            }
+            x += this.Habitaciones[i].Info();
+        }
+        return x;
+    }
 }

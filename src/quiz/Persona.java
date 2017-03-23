@@ -1,16 +1,21 @@
 package quiz;
 
 public class Persona {
-    private final String Nombre;
-    private final String Apellido;
-    private final String Cedula;
+    private String Nombre;
+    private String Apellido;
+    private String Cedula;
     private String Telefono;
 
-    public Persona(String Nombre, String Apellido, String Cedula, String Telefono) {
+    public void setNombre(String Nombre) {
         this.Nombre = Nombre;
+    }
+
+    public void setApellido(String Apellido) {
         this.Apellido = Apellido;
+    }
+
+    public void setCedula(String Cedula) {
         this.Cedula = Cedula;
-        this.Telefono = Telefono;
     }
 
     public String getNombre() {
@@ -32,4 +37,11 @@ public class Persona {
     public void setTelefono(String Telefono) {
         this.Telefono = Telefono;
     }
+
+    @Override
+    public String toString() {
+        return "Nombre: " + Nombre + " " + Apellido + "\nCedula: " + Cedula + "\nTelefono: " + Telefono;
+    }
+    
+    
 }
